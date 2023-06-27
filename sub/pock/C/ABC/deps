@@ -1,0 +1,15 @@
+ obj/eval.o: src/eval.c src/eval.h src/noun.h src/reader.h src/dbg.h
+	gcc  -c src/eval.c -o obj/eval.o -Wall -Wfatal-errors -O3
+  obj/main.o: src/main.c src/main.h src/noun.h src/writer.h src/reader.h \
+ src/eval.h
+	gcc  -c src/main.c -o obj/main.o -Wall -Wfatal-errors -O3
+  obj/noun.o: src/noun.c src/noun.h src/dbg.h
+	gcc  -c src/noun.c -o obj/noun.o -Wall -Wfatal-errors -O3
+  obj/reader.o: src/reader.c src/reader.h src/noun.h
+	gcc  -c src/reader.c -o obj/reader.o -Wall -Wfatal-errors -O3
+  obj/tests.o: src/tests.c src/main.h src/noun.h src/writer.h src/reader.h \
+ src/eval.h
+	gcc  -c src/tests.c -o obj/tests.o -Wall -Wfatal-errors -O3
+  obj/writer.o: src/writer.c src/writer.h src/noun.h
+	gcc  -c src/writer.c -o obj/writer.o -Wall -Wfatal-errors -O3
+
